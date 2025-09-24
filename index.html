@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Praxis Mustermann – Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- HERO mit großem Hintergrundbild -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1>Praxis Mustermann</h1>
+      <p>Digitale Anfragen • Online-Terminbuchung • Weniger Wartezeiten</p>
+      <a class="btn" href="#anfrage">Jetzt digital anfragen</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 3 Feature-Karten mit Bildern -->
+    <section class="grid features">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581594693701-92f1199b245c?q=80&w=1200&auto=format&fit=crop" alt="Wartezimmer" class="card-img">
+        <h3>⏱️ Kürzere Wartezeiten</h3>
+        <p>Rezepte & Überweisungen digital anfragen – Abholung ohne langes Warten.</p>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1583912267550-c212e355f580?q=80&w=1200&auto=format&fit=crop" alt="Terminvergabe" class="card-img">
+        <h3>📅 Online-Termine</h3>
+        <p>Blutabnahmen & Impfungen direkt buchen – Telefonleitungen bleiben frei.</p>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=1200&auto=format&fit=crop" alt="Praxisteam" class="card-img">
+        <h3>👩‍⚕️ Fokus aufs Wesentliche</h3>
+        <p>Weniger Administration, mehr Zeit für Patient:innen.</p>
+      </article>
+    </section>
+
+    <!-- Formular -->
+    <section id="anfrage" class="card form-card">
+      <h2><i class="fa fa-file-medical"></i> Rezept- / Überweisungsanfrage</h2>
+      <form id="demoForm">
+        <label>Vor- und Nachname*
+          <input required name="name" type="text" />
+        </label>
+        <label>Geburtsdatum*
+          <input required name="dob" type="date" />
+        </label>
+        <label>Kontakt (Telefon oder E-Mail)*
+          <input required name="contact" type="text" />
+        </label>
+        <label>Art der Anfrage*
+          <select required name="type">
+            <option value="">Bitte wählen …</option>
+            <option>Rezept</option>
+            <option>Überweisung</option>
+            <option>Beides</option>
+          </select>
+        </label>
+        <label>Details (Medikament / Fachrichtung / Hinweise)*
+          <textarea required name="details" rows="4" placeholder="z. B. Ramipril 5 mg, Überweisung Kardiologie …"></textarea>
+        </label>
+        <label>Bevorzugter Abhol-Slot
+          <select name="slot">
+            <option>Mo 10–11 Uhr</option>
+            <option>Mo 11–12 Uhr</option>
+            <option>Di 10–11 Uhr</option>
+            <option>Di 11–12 Uhr</option>
+            <option>Mi 10–11 Uhr</option>
+          </select>
+        </label>
+        <label class="consent">
+          <input type="checkbox" required name="consent" />
+          Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert und verarbeitet werden.
+          <a href="#datenschutz">Weitere Informationen</a>.
+        </label>
+        <button class="btn" type="submit">Anfrage senden</button>
+      </form>
+      <div id="success" class="success hidden">✅ Danke! Ihre Anfrage wurde gespeichert (Demo). Die Praxis informiert Sie, sobald die Unterlagen abholbereit sind.</div>
+    </section>
+
+    <!-- Terminbuchung (Platzhalter + Bild) -->
+    <section id="termin" class="card">
+      <h2><i class="fa fa-calendar-check"></i> Online-Termin buchen</h2>
+      <p>In der Live-Version wird hier z. B. Calendly/SimplyBook eingebettet.</p>
+      <div class="embed">
+        <img src="https://images.unsplash.com/photo-1518644730709-0835105d9daa?q=80&w=1200&auto=format&fit=crop" alt="Kalender" />
+        <p class="embed-note">🔗 Platzhalter – hier kommt der iFrame des Termin-Tools hinein.</p>
+      </div>
+    </section>
+
+    <!-- Datenschutz-Hinweis -->
+    <section id="datenschutz" class="card small">
+      <h3><i class="fa fa-shield-halved"></i> Hinweise (Demo)</h3>
+      <p>Diese Seite ist eine Demonstration. Für produktive Nutzung sind ein rechtssicheres Impressum, Datenschutzhinweise,
+         Auftragsverarbeitungsverträge mit Drittanbietern und ggf. ein Cookie-Banner erforderlich.</p>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="card">
+      <h2><i class="fa fa-phone"></i> Kontakt</h2>
+      <p>Praxis Mustermann · Musterstraße 12 · 12345 Musterstadt</p>
+      <p><i class="fa fa-phone"></i> 01234 567890 · <i class="fa fa-envelope"></i> info@praxis.de</p>
+      <p><i class="fa fa-clock"></i> Öffnungszeiten: Mo–Fr 8–12 · Di & Do 15–18 Uhr</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© Praxis Mustermann – Demo</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
