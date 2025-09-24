@@ -3,75 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hausarztpraxis Riehl – Demo</title>
-  <meta name="description" content="Demo einer modernen Hausarztpraxis-Website: hausärztliche Versorgung, moderne Diagnostik, ganzheitlicher Ansatz, Geschichte & Kontakt."/>
+  <title>Musterpraxis Köln – Online-Rezeption (Demo)</title>
+  <meta name="description" content="Demo: Online-Rezeption einer hausärztlichen Praxis – Rezepte & Überweisungen anfragen, Abholslot wählen, Wartezeiten vermeiden."/>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <!-- HERO -->
-  <header class="hero" role="banner" aria-label="Hausarztpraxis Riehl – Demo">
+  <header class="hero" role="banner" aria-label="Musterpraxis Köln – Demo">
     <div class="hero-overlay">
       <h1>Hausärztliche Versorgung – nah & verlässlich</h1>
-      <p>Individuelle Betreuung, moderne Diagnostik und ein Team mit Zeit für Sie.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary btn-lg" href="#leistungen"><i class="fa fa-stethoscope"></i> Leistungen</a>
-        <a class="btn btn-outline btn-lg" href="#kontakt"><i class="fa fa-phone"></i> Kontakt</a>
-      </div>
+      <p>Ihre digitale Rezeption: Rezepte & Überweisungen online anfragen – Wartezeiten reduzieren.</p>
+      <a class="btn btn-primary btn-lg" href="#anfrage"><i class="fa fa-file-pen"></i> Anfrage starten</a>
     </div>
   </header>
 
   <main class="container" role="main">
-    <!-- Kacheln: Kernbotschaften -->
-    <section id="leistungen" class="grid features" aria-labelledby="featTitle">
-      <h2 id="featTitle" class="section-title">Für Ihre Gesundheit</h2>
-
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" alt="Untersuchung in der Praxis" class="card-img">
-        <h3>Individuelle Patientenbegleitung</h3>
-        <p>Von akuten Anliegen bis zu chronischen Erkrankungen: Wir begleiten Sie mit klaren Empfehlungen und abgestimmten Therapien.</p>
-      </article>
-
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1581594693701-92f1199b245c?q=80&w=1200&auto=format&fit=crop" alt="Moderne Diagnostik" class="card-img">
-        <h3>Moderne Diagnostik & Therapie</h3>
-        <p>Aktuelle Leitlinien, verlässliche Diagnostik und Erfahrung sorgen für eine zielgerichtete Behandlung.</p>
-      </article>
-
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1582719478185-2b78f83f89e3?q=80&w=1200&auto=format&fit=crop" alt="Ganzheitlicher Ansatz" class="card-img">
-        <h3>Ganzheitlicher Ansatz</h3>
-        <p>Wir betrachten Beschwerden umfassend – somatisch und psychosomatisch – und beziehen bei Bedarf ergänzende Verfahren ein.</p>
-      </article>
-    </section>
-
-    <!-- „Unsere Geschichte“ -->
-    <section class="history card" aria-labelledby="histTitle">
-      <h2 id="histTitle"><i class="fa fa-heart-pulse"></i> Vertrauen in Erfahrung – seit Jahrzehnten</h2>
-      <p>Unsere Praxis ist seit vielen Jahren fest in der Nachbarschaft verankert. Das Team arbeitet eng zusammen – und bei Bedarf mit Kolleginnen und Kollegen anderer Fachrichtungen. Was konstant bleibt: Zeit für ein gutes Gespräch und eine Versorgung auf heutigem Stand.</p>
-    </section>
-
-    <!-- Empfang & Team (realistische Bilder) -->
+    <!-- Empfang & Team (lizenzfreie Platzhalter) -->
     <section class="card gallery" aria-labelledby="galTitle">
-      <h2 id="galTitle"><i class="fa fa-bell-concierge"></i> Empfang & Team</h2>
+      <h2 id="galTitle"><i class="fa fa-bell-concierge"></i> Empfang & Team (Demo)</h2>
       <div class="gallery-grid">
-        <!-- Rezeption (Pexels, frei nutzbar) -->
-        <img src="https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg" alt="Empfangsbereich der Praxis">
-        <!-- Team (Pexels, frei nutzbar) -->
-        <img src="https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg" alt="Hausärztliches Team">
+        <img src="https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg" alt="Empfangsbereich (Beispielfoto)">
+        <img src="https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg" alt="Ärzteteam (Beispielfoto)">
       </div>
-      <p class="muted">Hinweis: Platzhalterfotos (lizenzfrei). Im Livebetrieb bitte durch echte Praxisbilder ersetzen.</p>
+      <p class="muted">Hinweis: Beispielfotos (lizenzfrei). Im Livebetrieb bitte durch echte Praxisbilder ersetzen.</p>
     </section>
 
-    <!-- Online-Rezeption (Demo) -->
+    <!-- Online-Rezeption -->
     <section id="anfrage" class="card form-card" aria-labelledby="formTitle">
       <h2 id="formTitle"><i class="fa fa-file-medical"></i> Online-Rezeption (Demo)</h2>
-      <p class="muted">Fordern Sie Rezepte/Überweisungen an und wählen Sie einen Abholslot. (Demo-Versand über Formspree)</p>
-
       <div id="status" class="hidden" aria-live="polite"></div>
 
-      <!-- Formspree: trage deine ID unten im Script ein -->
+      <!-- Trage deine Formspree-ID unten im Script ein -->
       <form id="rezeptForm" novalidate>
         <input type="hidden" name="_subject" value="Neue Online-Anfrage (Demo)" />
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -85,7 +49,7 @@
 
         <fieldset>
           <legend>Anliegen</legend>
-          <label>Art der Anfrage* 
+          <label>Art der Anfrage*
             <select required name="type" id="typeSelect">
               <option value="">Bitte wählen …</option>
               <option value="Rezept">Rezept</option>
@@ -95,13 +59,21 @@
           </label>
 
           <div id="rezeptFields" class="group hidden">
-            <label>Medikament(e) <input name="med1" type="text" placeholder="z. B. Ramipril 5 mg, 1-0-0"></label>
-            <label>Hinweise <textarea name="med_notes" rows="3" placeholder="Dauermedikation, neue Dosierung …"></textarea></label>
+            <label>Medikament(e)
+              <input name="med1" type="text" placeholder="z. B. Ramipril 5 mg, 1-0-0">
+            </label>
+            <label>Hinweise
+              <textarea name="med_notes" rows="3" placeholder="Dauermedikation, neue Dosierung …"></textarea>
+            </label>
           </div>
 
           <div id="ueberwFields" class="group hidden">
-            <label>Fachrichtung/Ziel* <input name="ref_target" type="text" placeholder="z. B. Kardiologie"></label>
-            <label>Grund <textarea name="ref_reason" rows="3" placeholder="z. B. Abklärung Belastbarkeit"></textarea></label>
+            <label>Fachrichtung/Ziel
+              <input name="ref_target" type="text" placeholder="z. B. Kardiologie">
+            </label>
+            <label>Grund
+              <textarea name="ref_reason" rows="3" placeholder="z. B. Abklärung Belastbarkeit"></textarea>
+            </label>
           </div>
         </fieldset>
 
@@ -135,35 +107,37 @@
           <span class="btn-label"><i class="fa fa-paper-plane"></i> Anfrage senden</span>
           <span class="btn-spinner" aria-hidden="true"></span>
         </button>
-        <p class="hint">Demo: Versand über sicheren Formulardienst, keine Speicherung auf dieser Seite.</p>
+        <p class="hint">Demo: Versand über sicheren Formulardienst (Formspree), keine Speicherung auf dieser Seite.</p>
       </form>
     </section>
 
-    <!-- Kontakt -->
+    <!-- Kontakt (fiktiv) -->
     <section id="kontakt" class="card contact" aria-labelledby="kontTitle">
       <h2 id="kontTitle"><i class="fa fa-location-dot"></i> Kontakt & Anfahrt</h2>
       <div class="contact-grid">
         <div>
-          <p><strong>Telefon:</strong> 0221 / 763126</p>
-          <p><strong>Adresse:</strong> Sieboldstraße 22 · 50735 Köln</p>
-          <p class="muted">Demo-Inhalte – bitte Praxisdaten im Livebetrieb prüfen/anpassen.</p>
+          <p><strong>Musterpraxis Köln</strong></p>
+          <p>Musterstraße 12 · 50667 Köln</p>
+          <p>Tel. 0221 / 123456 · info@musterpraxis.de</p>
+          <p class="muted">Demo-Daten – nur zur Veranschaulichung.</p>
         </div>
+        <!-- Neutrale Karte: Köln Innenstadt (keine reale Praxisadresse) -->
         <iframe
-          title="Karte"
+          title="Karte (Demo)"
           class="map"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Sieboldstra%C3%9Fe%2022%2050735%20K%C3%B6ln&output=embed">
+          src="https://www.google.com/maps?q=K%C3%B6ln%20Innenstadt&output=embed">
         </iframe>
       </div>
     </section>
   </main>
 
   <footer class="footer" role="contentinfo">
-    <small>© Demo-Website für eine Hausarztpraxis</small>
+    <small>© Demo-Website für eine Hausarztpraxis (fiktive Daten)</small>
   </footer>
 
-  <!-- Deine Formspree-ID hier eintragen -->
+  <!-- Formspree-ID hier eintragen -->
   <script>window.FORMSPREE_ID = "DEINE_FORMSPREE_ID";</script>
   <script src="script.js"></script>
 </body>
