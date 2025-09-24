@@ -5,51 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Praxis Mustermann – Demo</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Icons (Font Awesome) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- HERO mit großem Hintergrundbild -->
-  <header class="hero">
+  <!-- HERO -->
+  <header class="hero" role="banner" aria-label="Praxis Mustermann">
     <div class="hero-overlay">
       <h1>Praxis Mustermann</h1>
-      <p>Digitale Anfragen • Online-Terminbuchung • Weniger Wartezeiten</p>
-      <a class="btn" href="#anfrage">Jetzt digital anfragen</a>
+      <p>Digitale Anfragen • Online-Termine • Weniger Wartezeit</p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-lg" href="#anfrage">
+          <i class="fa fa-file-medical"></i> Rezept / Überweisung
+        </a>
+        <!-- Größerer Infotainment-Button -->
+        <a class="btn btn-lg btn-infotainment" href="#infotainment" aria-label="Infotainment: Patienteninfos & Hinweise">
+          <i class="fa fa-circle-info"></i> Infotainment
+        </a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <!-- 3 Feature-Karten mit Bildern -->
-    <section class="grid features">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1581594693701-92f1199b245c?q=80&w=1200&auto=format&fit=crop" alt="Wartezimmer" class="card-img">
-        <h3>⏱️ Kürzere Wartezeiten</h3>
-        <p>Rezepte & Überweisungen digital anfragen – Abholung ohne langes Warten.</p>
-      </article>
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1583912267550-c212e355f580?q=80&w=1200&auto=format&fit=crop" alt="Terminvergabe" class="card-img">
-        <h3>📅 Online-Termine</h3>
-        <p>Blutabnahmen & Impfungen direkt buchen – Telefonleitungen bleiben frei.</p>
-      </article>
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=1200&auto=format&fit=crop" alt="Praxisteam" class="card-img">
-        <h3>👩‍⚕️ Fokus aufs Wesentliche</h3>
-        <p>Weniger Administration, mehr Zeit für Patient:innen.</p>
-      </article>
+  <main class="container" role="main">
+    <!-- GALLERY: Praxisbilder -->
+    <section class="card gallery" aria-labelledby="galTitle">
+      <h2 id="galTitle"><i class="fa fa-images"></i> Einblicke in die Praxis</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1580281780460-82d277b0cbd7?q=80&w=1200&auto=format&fit=crop" alt="Empfangsbereich der Praxis">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" alt="Behandlungszimmer">
+        <img src="https://images.unsplash.com/photo-1584987601558-c3b1f3d6c4e9?q=80&w=1200&auto=format&fit=crop" alt="Wartebereich">
+        <img src="https://images.unsplash.com/photo-1584987602109-77a8f3e80e7a?q=80&w=1200&auto=format&fit=crop" alt="Labor / Blutabnahme">
+      </div>
     </section>
 
-    <!-- Formular -->
-    <section id="anfrage" class="card form-card">
-      <h2><i class="fa fa-file-medical"></i> Rezept- / Überweisungsanfrage</h2>
+    <!-- TEAM: bunt aufgestellt -->
+    <section class="team" aria-labelledby="teamTitle">
+      <h2 id="teamTitle"><i class="fa fa-user-doctor"></i> Unser Team</h2>
+      <div class="team-grid">
+        <article class="team-card tone-blue">
+          <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=800&auto=format&fit=crop" alt="Dr. Anna Müller">
+          <h3>Dr. Anna Müller</h3>
+          <p>Fachärztin für Allgemeinmedizin</p>
+        </article>
+        <article class="team-card tone-mint">
+          <img src="https://images.unsplash.com/photo-1555421689-43cad7100751?q=80&w=800&auto=format&fit=crop" alt="Dr. Max Schulz">
+          <h3>Dr. Max Schulz</h3>
+          <p>Innere Medizin</p>
+        </article>
+        <article class="team-card tone-rose">
+          <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=800&auto=format&fit=crop" alt="MFA-Team">
+          <h3>MFA-Team</h3>
+          <p>Empfang • Blutabnahme • Organisation</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FORMULAR -->
+    <section id="anfrage" class="card form-card" aria-labelledby="formTitle">
+      <h2 id="formTitle"><i class="fa fa-file-medical"></i> Rezept- / Überweisungsanfrage</h2>
       <form id="demoForm">
         <label>Vor- und Nachname*
-          <input required name="name" type="text" />
+          <input required name="name" type="text" autocomplete="name" />
         </label>
         <label>Geburtsdatum*
           <input required name="dob" type="date" />
         </label>
         <label>Kontakt (Telefon oder E-Mail)*
-          <input required name="contact" type="text" />
+          <input required name="contact" type="text" autocomplete="tel email" />
         </label>
         <label>Art der Anfrage*
           <select required name="type">
@@ -60,54 +83,70 @@
           </select>
         </label>
         <label>Details (Medikament / Fachrichtung / Hinweise)*
-          <textarea required name="details" rows="4" placeholder="z. B. Ramipril 5 mg, Überweisung Kardiologie …"></textarea>
+          <textarea required name="details" rows="4"
+            placeholder="z. B. Ramipril 5 mg, Überweisung Kardiologie …"></textarea>
         </label>
-        <label>Bevorzugter Abhol-Slot
-          <select name="slot">
-            <option>Mo 10–11 Uhr</option>
-            <option>Mo 11–12 Uhr</option>
-            <option>Di 10–11 Uhr</option>
-            <option>Di 11–12 Uhr</option>
-            <option>Mi 10–11 Uhr</option>
-          </select>
-        </label>
+        <div class="row">
+          <label>Bevorzugter Abhol-Slot
+            <select name="slot">
+              <option>Mo 10–11 Uhr</option>
+              <option>Mo 11–12 Uhr</option>
+              <option>Di 10–11 Uhr</option>
+              <option>Di 11–12 Uhr</option>
+              <option>Mi 10–11 Uhr</option>
+            </select>
+          </label>
+          <label>Dringlichkeit
+            <select name="prio">
+              <option>Normal (3 Werktage)</option>
+              <option>Eilig (24 Std.)</option>
+            </select>
+          </label>
+        </div>
         <label class="consent">
           <input type="checkbox" required name="consent" />
           Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert und verarbeitet werden.
-          <a href="#datenschutz">Weitere Informationen</a>.
         </label>
-        <button class="btn" type="submit">Anfrage senden</button>
+        <button class="btn btn-primary" type="submit">Anfrage senden</button>
+        <p class="hint">Demo: Daten werden nur lokal im Browser gespeichert.</p>
       </form>
-      <div id="success" class="success hidden">✅ Danke! Ihre Anfrage wurde gespeichert (Demo). Die Praxis informiert Sie, sobald die Unterlagen abholbereit sind.</div>
+      <div id="success" class="success hidden" role="status">
+        ✅ Danke! Ihre Anfrage wurde gespeichert (Demo). Die Praxis informiert Sie, sobald die Unterlagen bereit sind.
+      </div>
     </section>
 
-    <!-- Terminbuchung (Platzhalter + Bild) -->
-    <section id="termin" class="card">
-      <h2><i class="fa fa-calendar-check"></i> Online-Termin buchen</h2>
-      <p>In der Live-Version wird hier z. B. Calendly/SimplyBook eingebettet.</p>
+    <!-- INFOTAINMENT -->
+    <section id="infotainment" class="card infotainment" aria-labelledby="infoTitle">
+      <h2 id="infoTitle"><i class="fa fa-circle-info"></i> Infotainment</h2>
+      <ul class="info-list">
+        <li><i class="fa fa-syringe"></i> Impfsprechstunde: Di & Do – online buchbar</li>
+        <li><i class="fa fa-heart-pulse"></i> Vorsorge-Check ab 35: jetzt Termin reservieren</li>
+        <li><i class="fa fa-vial"></i> Blutabnahme: morgens 8–10 Uhr (mit Termin)</li>
+      </ul>
+      <a class="btn btn-lg btn-infotainment" href="#termin">Jetzt Terminoptionen ansehen</a>
+    </section>
+
+    <!-- TERMIN-PLATZHALTER -->
+    <section id="termin" class="card" aria-labelledby="termTitle">
+      <h2 id="termTitle"><i class="fa fa-calendar-check"></i> Online-Termin buchen</h2>
+      <p>Hier kann Calendly/SimplyBook eingebettet werden (iFrame). Für die Demo ein visueller Platzhalter:</p>
       <div class="embed">
-        <img src="https://images.unsplash.com/photo-1518644730709-0835105d9daa?q=80&w=1200&auto=format&fit=crop" alt="Kalender" />
+        <img src="https://images.unsplash.com/photo-1518644730709-0835105d9daa?q=80&w=1200&auto=format&fit=crop"
+             alt="Kalenderansicht">
         <p class="embed-note">🔗 Platzhalter – hier kommt der iFrame des Termin-Tools hinein.</p>
       </div>
     </section>
 
-    <!-- Datenschutz-Hinweis -->
-    <section id="datenschutz" class="card small">
-      <h3><i class="fa fa-shield-halved"></i> Hinweise (Demo)</h3>
-      <p>Diese Seite ist eine Demonstration. Für produktive Nutzung sind ein rechtssicheres Impressum, Datenschutzhinweise,
-         Auftragsverarbeitungsverträge mit Drittanbietern und ggf. ein Cookie-Banner erforderlich.</p>
-    </section>
-
-    <!-- Kontakt -->
-    <section id="kontakt" class="card">
-      <h2><i class="fa fa-phone"></i> Kontakt</h2>
+    <!-- KONTAKT -->
+    <section id="kontakt" class="card" aria-labelledby="kontTitle">
+      <h2 id="kontTitle"><i class="fa fa-phone"></i> Kontakt</h2>
       <p>Praxis Mustermann · Musterstraße 12 · 12345 Musterstadt</p>
       <p><i class="fa fa-phone"></i> 01234 567890 · <i class="fa fa-envelope"></i> info@praxis.de</p>
       <p><i class="fa fa-clock"></i> Öffnungszeiten: Mo–Fr 8–12 · Di & Do 15–18 Uhr</p>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <small>© Praxis Mustermann – Demo</small>
   </footer>
 
